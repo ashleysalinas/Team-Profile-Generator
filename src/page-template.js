@@ -5,7 +5,7 @@ const generateTeam = (team) => {
         <section class="employee-card">
             <div class="card-header">
             <h2><i class="fas fa-mug-hot"> </i>${manager.name}</h2>
-            <h3>${manager.getRole()}</h3>
+            <h2>${manager.getRole()}</h2>
             </div>
             <div class="card-body">
             <h4>Email: <a href="mailto:${manager.email}">${manager.email}</a></h4>
@@ -19,12 +19,12 @@ const generateTeam = (team) => {
         return `
         <section class="employee-card">
             <div class="card-header">
-            <h2>${engineer.name}</h2>
-            <h3>${engineer.getRole()}</h3>
+            <h2><i class="fas fa-glasses"></i> ${engineer.name}</h2>
+            <h2>${engineer.getRole()}</h2>
             </div>
             <div class="card-body">
             <h4>Email: <a href="mailto:${engineer.email}">${engineer.email}</a></h4>
-            <h4>Github: <a href="https://github.com/${engineer.github}">${engineer.github}</h4>
+            <h4>Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></h4>
             </div>
         </section>
         `
@@ -34,8 +34,8 @@ const generateTeam = (team) => {
         return `
         <section class="employee-card">
             <div class="card-header">
-            <h2>${intern.name}</h2>
-            <h3>${intern.getRole()}</h3>
+            <h2><i class="fas fa-graduation-cap"></i> ${intern.name}</h2>
+            <h2>${intern.getRole()}</h2>
             </div>
             <div class="card-body">
             <h4>Email: <a href="mailto:${intern.email}">${intern.email}</a></h4>

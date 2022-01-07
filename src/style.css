@@ -18,3 +18,10 @@ h1 {
     background-color: #49B4FE;
     color: white;
 }
+
+.employee-card {
+margin: 1em;
+  max-width: 280px;
+  width: 90%;
+  min-height: 22rem;
+}
