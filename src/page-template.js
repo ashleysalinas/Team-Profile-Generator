@@ -2,46 +2,46 @@
 const generateTeam = (team) => {
     const createManagerCard = (manager) => {
         return `
-        <div class="employee-card">
+        <section class="employee-card">
             <div class="card-header">
-            <h2>${manager.name}</h2>
+            <h2><i class="fas fa-mug-hot"> </i>${manager.name}</h2>
             <h3>${manager.getRole()}</h3>
             </div>
             <div class="card-body">
-            <h4>${manager.officeNumber}</h4>
-            <h4>Email: <a href="mailto:${manager.email}">${manager.email}</h4>
+            <h4>Email: <a href="mailto:${manager.email}">${manager.email}</a></h4>
+            <h4>Office Number: ${manager.officeNumber}</h4>
             </div>
-        </div>
+        </section>
         `
     }
 
     const createEngineerCard = (engineer) => {
         return `
-        <div class="employee-card">
+        <section class="employee-card">
             <div class="card-header">
             <h2>${engineer.name}</h2>
             <h3>${engineer.getRole()}</h3>
             </div>
             <div class="card-body">
-            <h4>Email: <a href="mailto:${engineer.email}">${engineer.email}</h4>
-            <h4>Github: ${engineer.github}</h4>
+            <h4>Email: <a href="mailto:${engineer.email}">${engineer.email}</a></h4>
+            <h4>Github: <a href="https://github.com/${engineer.github}">${engineer.github}</h4>
             </div>
-        </div>
+        </section>
         `
     }
 
     const createInternCard = (intern) => {
         return `
-        <div class="employee-card">
+        <section class="employee-card">
             <div class="card-header">
             <h2>${intern.name}</h2>
             <h3>${intern.getRole()}</h3>
             </div>
             <div class="card-body">
-            <h4>Email: <a href="mailto:${intern.email}">${intern.email}</h4>
+            <h4>Email: <a href="mailto:${intern.email}">${intern.email}</a></h4>
             <h4>Github: ${intern.school}</h4>
             </div>
-        </div>
+        </section>
         `
     }
 
@@ -76,6 +76,8 @@ module.exports = team => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./src/style.css">
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100&display=swap" rel="stylesheet">
     <title>My Team</title>
 </head>
 
@@ -84,11 +86,7 @@ module.exports = team => {
         <h1>My Team</h1>
     </div>
     <div>
-        <div>
-            <div>
-                ${generateTeam(team)}
-            </div>
-        </div>
+        ${generateTeam(team)}
     </div>
 </body>
 </html>
