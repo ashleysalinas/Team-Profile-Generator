@@ -1,9 +1,12 @@
 const inquirer = require('inquirer');
+const fs = require("fs");
 //import classes
 const Manager = require('./lib/Manager')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
-const teamMembers = []
+const teamMembers = [] //empty array later populated by answers
+const render = require('./src/page-template')
+
 
 function mainMenu() {
     console.log("Welcome to the Team Profile Generator!")
@@ -122,7 +125,7 @@ function mainMenu() {
     }
 
     function buildTeam() {
-        const html = []
+          fs.writeFileSync("index.html",render(teamMembers)); //adds new file to base directory
 
     }
 }
