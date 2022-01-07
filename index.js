@@ -1,4 +1,9 @@
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
+//import classes
+const Manager = require('./lib/Manager')
+const Engineer = require('./lib/Engineer')
+const Intern = require('./lib/Intern')
+const teamMembers = []
 
 function mainMenu() {
     console.log("Welcome to the Team Profile Generator!")
@@ -27,9 +32,11 @@ function mainMenu() {
             name: 'managerContinue',
             message: "Would you like to add more team members?",
             type: 'confirm',
-            //default: true,
+            default: true,
         },
     ]).then((answers) => {
+        const manager = new Manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOffice)
+        teamMembers.push(manager)
         if (answers.managerContinue == true) {
             addAnEmployee()
         } else (
@@ -43,14 +50,20 @@ function mainMenu() {
                 name: 'employeeType',
                 message: 'What type of employee would you like to add?',
                 type: 'list',
-                choices: ['Add an Engineer', 'Add an Intern']
+                choices: ['Add an Engineer', 'Add an Intern', 'Exit']
             }
         ]).then((answers) => {
-            if (answers.employeeType == "Add an Engineer") {
-                addAnEngineer()
-            }
-            if (answers.employeeType == "Add an Intern") {
-                addAnIntern()
+            switch(answers.employeeType) {
+                case 'Add an Engineer':
+                    addAnEngineer();
+                    break;
+                case 'Add an Intern':
+                    addAnIntern();
+                    break;
+                case 'Exit':
+                        console.log('Generating page now')
+                        console.log(teamMembers)
+                        break;
             }
         })
     }
@@ -74,6 +87,8 @@ function mainMenu() {
             type: 'input'
             },
         ]).then((answers) => {
+            const engineer = new Engineer(answers.engineerName, answers.EngineerID, answers.engineerEmail, answers.engineerGithub)
+            teamMembers.push(engineer)
             console.log("New engineer added!")
             addAnEmployee()
         })
@@ -98,6 +113,8 @@ function mainMenu() {
             type: 'input'
             },
         ]).then((answers) => {
+            const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool)
+            teamMembers.push(intern)
             console.log("New intern added!")
             addAnEmployee()
         })
