@@ -125,8 +125,8 @@ function mainMenu() {
     }
 
     function buildTeam() {
-          fs.writeFileSync("index.html",render(teamMembers)); //adds new file to base directory
-
+        fs.writeFileSync("newPage.html",render(teamMembers)); //adds new file to base directory
+        console.log('Type "open newPage.html" to see your generated page!')
     }
 }
 
