@@ -50,7 +50,7 @@ function mainMenu() {
                 addAnEngineer()
             }
             if (answers.employeeType == "Add an Intern") {
-                console.log("add an intern function")
+                addAnIntern()
             }
         })
     }
@@ -81,24 +81,24 @@ function mainMenu() {
 
     function addAnIntern() {
         inquirer.prompt([
-            {name:'engineerName',
-            message: "What is the engineer's name?",
+            {name:'internName',
+            message: "What is the intern's name?",
             type: 'input'
             },
-            {name:'engineerID',
-            message: "What is the engineer's ID?",
+            {name:'internID',
+            message: "What is the intern's ID?",
             type: 'number'
             },
-            {name:'engineerEmail',
-            message: "What is the engineer's email?",
+            {name:'internEmail',
+            message: "What is the intern's email?",
             type: 'input'
             },
-            {name:'engineerGithub',
-            message: "What is the engineer's Github username?",
+            {name:'internSchool',
+            message: "What school does the intern attend?",
             type: 'input'
             },
         ]).then((answers) => {
-            console.log("New engineer added!")
+            console.log("New intern added!")
             addAnEmployee()
         })
     }
