@@ -39,9 +39,10 @@ function mainMenu() {
         teamMembers.push(manager)
         if (answers.managerContinue == true) {
             addAnEmployee()
-        } else (
-            console.log("Goodbye!")
-        )
+        } else {
+            console.log("Generating page now")
+            buildTeam()
+        }
     })
 
     function addAnEmployee() {
@@ -62,7 +63,7 @@ function mainMenu() {
                     break;
                 case 'Exit':
                         console.log('Generating page now')
-                        console.log(teamMembers)
+                        buildTeam()
                         break;
             }
         })
@@ -118,6 +119,11 @@ function mainMenu() {
             console.log("New intern added!")
             addAnEmployee()
         })
+    }
+
+    function buildTeam() {
+        const html = []
+
     }
 }
 
