@@ -4,8 +4,8 @@ const generateTeam = (team) => {
         return `
         <section class="employee-card">
             <div class="card-header">
-            <h2><i class="fas fa-mug-hot"> </i>${manager.name}</h2>
-            <h2>${manager.getRole()}</h2>
+            <h2>${manager.name}</h2>
+            <h2><i class="fas fa-mug-hot"></i> ${manager.getRole()}</h2>
             </div>
             <div class="card-body">
             <h4>Email: <a href="mailto:${manager.email}">${manager.email}</a></h4>
@@ -19,8 +19,8 @@ const generateTeam = (team) => {
         return `
         <section class="employee-card">
             <div class="card-header">
-            <h2><i class="fas fa-glasses"></i> ${engineer.name}</h2>
-            <h2>${engineer.getRole()}</h2>
+            <h2> ${engineer.name}</h2>
+            <h2><i class="fas fa-glasses"></i> ${engineer.getRole()}</h2>
             </div>
             <div class="card-body">
             <h4>Email: <a href="mailto:${engineer.email}">${engineer.email}</a></h4>
@@ -34,12 +34,12 @@ const generateTeam = (team) => {
         return `
         <section class="employee-card">
             <div class="card-header">
-            <h2><i class="fas fa-graduation-cap"></i> ${intern.name}</h2>
-            <h2>${intern.getRole()}</h2>
+            <h2> ${intern.name}</h2>
+            <h2><i class="fas fa-graduation-cap"></i> ${intern.getRole()}</h2>
             </div>
             <div class="card-body">
             <h4>Email: <a href="mailto:${intern.email}">${intern.email}</a></h4>
-            <h4>Github: ${intern.school}</h4>
+            <h4>School: ${intern.school}</h4>
             </div>
         </section>
         `
@@ -85,7 +85,7 @@ module.exports = team => {
     <div class="header-card">
         <h1>My Team</h1>
     </div>
-    <div>
+    <div class="team-area">
         ${generateTeam(team)}
     </div>
 </body>
