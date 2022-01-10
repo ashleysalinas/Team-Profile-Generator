@@ -1,6 +1,6 @@
 # Team-Profile-Generator
 
-![] (tpg-demo.gif)
+![] (tpg-demo.gif) 
 
 Week 10 - OOP assignment for the Trilogy/Southern Methodist University Web Development Bootcamp
 
