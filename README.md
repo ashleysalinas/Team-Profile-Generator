@@ -34,7 +34,7 @@ This project was created for Week 10 - OOP of the Trilogy/Southern Methodist Uni
   ``` open newPage.html ```
     The above command should open a copy of the file in your default browser.
  ### Test
-   To run the tests make sure that you have Jest added to your npm (installation instructions can be found <a href"https://jest-bot.github.io/jest/docs/getting-started.html"> here</a>. Once Jest is installed, type: 
+   To run the tests make sure that you have Jest added to your npm (installation instructions can be found <a href"https://jest-bot.github.io/jest/docs/getting-started.html"> here </a>. Once Jest is installed, type: 
    ``` npm run test (name of file) ```
   
   ## Usage
