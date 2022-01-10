@@ -15,7 +15,7 @@ This project was created for Week 10 - OOP of the Trilogy/Southern Methodist Uni
 
 ## Getting Started
 ### Prerequisites
-  This app makes use of npm. To install, please follow the directions <a href="https://docs.npmjs.com/about-npm"> here</a>.
+  This app makes use of npm. To install, please follow the directions <a href="https://docs.npmjs.com/about-npm"> here)</a>.
   
 ### Local Usage
    Step 1. Clone the repo
